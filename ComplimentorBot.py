@@ -61,7 +61,7 @@ def handle_command(command, channel):
         response = complimentor.generate_compliment(command)
 
     if command.startswith(HELP_COMMAND):
-        response = "Sorry, this feature is not ready yet."
+        response = "`compliment` - generates a random compliment targeted at a random workspace member\n`compliment [name]` - generates a random compliment targeted at [name]\n`help` - displays this message"
 
     # Sends the response back to the channel
     slack_client.api_call(
