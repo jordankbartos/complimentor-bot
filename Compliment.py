@@ -43,7 +43,7 @@ class Complimentor:
         if command == "compliment":
             name = self.names[random.randint(0, len(self.names) - 1)]
         else:
-            name = command.replace('compliment','',65535).split()[0].replace('@', '', 65535)
+            name = command.replace('compliment','',65535).split()[0]
 
         adverb = self.adverbs[random.randint(0, len(self.adverbs) - 1)]
         adj_one = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
