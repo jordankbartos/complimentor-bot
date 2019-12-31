@@ -43,7 +43,7 @@ class Complimentor:
         if command == "compliment":
             name = self.names[random.randint(0, len(self.names) - 1)]
         else:
-            name = command.replace('compliment','',65535)
+            name = command.replace('compliment','',65535).split()[0]
 
         adverb = self.adverbs[random.randint(0, len(self.adverbs) - 1)]
         adj_one = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
@@ -54,7 +54,7 @@ class Complimentor:
             adj_two = self.adjectives[random.randint(0, len(self.adjectives) - 1)]
 
         # return formatted response
-        return name + " is " + adverb + " " + adj_one + ", " + adj_two + " " + noun + "."
+        return name + " is " + adverb + " " + adj_one + " and " + adj_two + " " + noun + "."
 
 
     def get_noun(self):

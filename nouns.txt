@@ -7,7 +7,6 @@ winner
 wizard
 authority
 ace
-MVP
 virtuoso
 idol
 mentor
