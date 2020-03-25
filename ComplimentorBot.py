@@ -62,6 +62,8 @@ def handle_command(command, channel):
 
     if command.startswith(HELP_COMMAND):
         response = "`compliment` - generates a random compliment targeted at a random workspace member\n`compliment [name]` - generates a random compliment targeted at [name]\n`help` - displays this message"
+    else:
+        response = "Sorry, I don't understand that. Try `help` for suggestions"
 
     # Sends the response back to the channel
     slack_client.api_call(
