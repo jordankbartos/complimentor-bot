@@ -60,7 +60,7 @@ def handle_command(command, channel):
     if command.startswith(COMPLIMENT_COMMAND):
         response = complimentor.generate_compliment(command)
 
-    if command.startswith(HELP_COMMAND):
+    elif command.startswith(HELP_COMMAND):
         response = "`compliment` - generates a random compliment targeted at a random workspace member\n`compliment [name]` - generates a random compliment targeted at [name]\n`help` - displays this message"
     else:
         response = "Sorry, I don't understand that. Try `help` for suggestions"
@@ -80,6 +80,7 @@ if __name__ == "__main__":
         starterbot_id = slack_client.api_call("auth.test")["user_id"]
         while True:
             command, channel = parse_bot_commands(slack_client.rtm_read())
+            print("command:", command)
             if command:
                 handle_command(command, channel)
             time.sleep(RTM_READ_DELAY)
