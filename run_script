@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while [ 1 -ne 0 ]
+do
+  python ComplimentorBot.py
+  echo -n "complimentor bot failed at " >> bot_log
+  echo $(date) >> bot_log
+  sleep 5
+done
+echo "loop ended somehow"
